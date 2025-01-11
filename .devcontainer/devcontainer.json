@@ -1,0 +1,24 @@
+{
+	"name": "VScode LaTeX Environment",
+	// "build":
+	// 	"dockerfile": "Dockerfile"
+	// },
+	"image": "texlive/texlive:latest",
+	"workspaceFolder": "/workspace",
+	"mounts": [
+		"source=${env:WORKSPACE_PATH},target=/workspace,type=bind"
+	],
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/bash"
+			},
+			"extensions": [
+				"james-yu.latex-workshop",
+				"tecosaur.latex-utilities",
+				"yzhang.markdown-all-in-one",
+				"valentjn.vscode-ltex"
+			]
+		}
+	}
+}
